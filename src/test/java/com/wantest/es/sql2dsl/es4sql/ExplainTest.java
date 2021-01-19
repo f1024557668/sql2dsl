@@ -15,7 +15,7 @@ public class ExplainTest {
 
 //         String sql = String.format("SELECT * FROM my_index limit 1");
 //         System.out.println(sql);
-            String sql = "select * from student where id=3 group by name,id";
+            String sql = "select histogram(time,interval 1 hour) as t,count(1) as c from pla_server-2020-08-07 group by t";
 // //        System.out.println(SqlToDsl.toExactDsl(sql)); // 精确匹配
 // //        System.out.println(SqlToDsl.toPhraseDsl(sql)); // 模糊匹配
          String s = SqlToDsl.toExactDsl(sql); //生成公共集群json
